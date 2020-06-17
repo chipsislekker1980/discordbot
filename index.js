@@ -3,9 +3,9 @@ const botConfig = require("./botconfig.json");
 
 const fs = require("fs");
 
-client.commands = new discord.Collection();
-
 const client = new discord.Client();
+
+client.commands = new discord.Collection();
 
 client.login(process.env.token);
 
