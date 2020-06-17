@@ -5,6 +5,8 @@ const fs = require("fs");
 
 const client = new discord.Client();
 
+const bot = new discord.Client();
+
 client.commands = new discord.Collection();
 
 client.login(process.env.token);
@@ -55,7 +57,7 @@ client.on("message", async message => {
 
     if(commands) commands.run(bot,message, arguments);
 
-    
+
 
 if (command === `${prefix}ban`) {
 
