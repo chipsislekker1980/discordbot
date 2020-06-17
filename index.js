@@ -33,7 +33,7 @@ fs.readdir("./commands/" , (err, files) => {
 
 client.on("ready", async () => {
 
-    console.log(`${client.user.username} is beschikbaar voor servers!`)
+    console.log(`${client.user.username} is online!`)
     client.user.setActivity(`in ${client.guilds.cache.size} servers`, {type: "STREAMING"})
 })
 
