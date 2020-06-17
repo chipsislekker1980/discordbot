@@ -3,7 +3,6 @@ const botConfig = require("./botconfig.json");
 
 const fs = require("fs");
 
-const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
 const client = new discord.Client();
@@ -26,7 +25,7 @@ fs.readdir("./commands/" , (err, files) => {
         var fileGet = require(`./commands/${f}`);
         console.log(`De file ${f} is geladen : )`)
 
-        bot.commands.set(fileGet.help.name, fileGet);
+        client.commands.set(fileGet.help.name, fileGet);
 
     })
    
