@@ -3,6 +3,7 @@ const botConfig = require("./botconfig.json");
 
 const fs = require("fs");
 
+const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
 const client = new discord.Client();
@@ -10,7 +11,6 @@ const client = new discord.Client();
 client.login(process.env.token);
 
 fs.readdir("./commands/" , (err, files) => {
-
 
     if(err) console.log(err);
 
