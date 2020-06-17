@@ -7,10 +7,10 @@ bot.commands = new discord.Collection();
 
 const client = new discord.Client();
 
+client.login(process.env.token);
 
 fs.readdir("./commands/" , (err, files) => {
 
-    client.login(process.env.token);
 
     if(err) console.log(err);
 
