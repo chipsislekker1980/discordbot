@@ -53,7 +53,7 @@ client.on("message", async message => {
 
     var commands = client.commands.get(command.slice(prefix.length));
 
-    if(commands) commands.run(bot,message, arguments);
+    if(commands) commands.run(client,message, arguments);
 
 
 
