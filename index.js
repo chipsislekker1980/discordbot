@@ -3,7 +3,7 @@ const botConfig = require("./botconfig.json");
 
 const fs = require("fs");
 
-bot.commands = new discord.Collection();
+client.commands = new discord.Collection();
 
 const client = new discord.Client();
 
