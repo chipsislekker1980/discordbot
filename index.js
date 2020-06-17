@@ -5,8 +5,6 @@ const fs = require("fs");
 
 const client = new discord.Client();
 
-const bot = new discord.Client();
-
 client.commands = new discord.Collection();
 
 client.login(process.env.token);
@@ -53,7 +51,7 @@ client.on("message", async message => {
     
     var arguments = messageArray.slice(1);
 
-    var commands = bot.commands.get(command.slice(prefix.length));
+    var commands = client.commands.get(command.slice(prefix.length));
 
     if(commands) commands.run(bot,message, arguments);
 
