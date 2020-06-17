@@ -55,6 +55,8 @@ client.on("message", async message => {
 
     if(commands) commands.run(bot,message, arguments);
 
+    
+
 if (command === `${prefix}ban`) {
 
     const args = message.content.slice(prefix.length).split(/ +/);
