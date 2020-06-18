@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("Hallo " + message.author.username)
     .setThumbnail("https://imgur.com/9lPvrTz.png")
     .setDescription("_**Uw ticket is aangemaakt!**_")
-    .setFooter("Clearance ticket systeem", "https://imgur.com/9lPvrTz.png");
+    .setFooter(" | Clearance ticket system | ");
 
     message.channel.send(embed);
 
