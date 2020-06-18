@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("Hallo " + message.author.username)
     .setThumbnail("https://imgur.com/9lPvrTz")
     .setDescription("_**Uw ticket is aangemaakt!**_")
-    .setFooter("© WoWide 2020", "https://imgur.com/9lPvrTz");
+    .setFooter("Clearance ticket systeem", "https://imgur.com/9lPvrTz");
 
     message.channel.send(embed);
 
