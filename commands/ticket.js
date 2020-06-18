@@ -24,10 +24,9 @@ module.exports.run = async (bot, message, args) => {
     if(ticketBestaat) return;
 
     var embed = new discord.MessageEmbed()
-        .setTitle("Hallo " + message.author.username)
-        .setThumbnail("https://imgur.com/9lPvrTz")
-        .setDescription("Je ticket is aangemaakt")
-        .setFooter("Stel je vragen/klachten daar in!");
+    .setTitle("Hallo " + message.author.username)
+    .setDescription("_**Uw ticket is aangemaakt!**_")
+    .setFooter("© Clearance", "https://imgur.com/9lPvrTz");
 
     message.channel.send(embed);
 
