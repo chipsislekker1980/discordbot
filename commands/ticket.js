@@ -25,8 +25,9 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.MessageEmbed()
     .setTitle("Hallo " + message.author.username)
+    .setThumbnail("https://imgur.com/9lPvrTz")
     .setDescription("_**Uw ticket is aangemaakt!**_")
-    .setFooter("© Clearance", "https://imgur.com/9lPvrTz");
+    .setFooter("© WoWide 2020", "https://imgur.com/9lPvrTz");
 
     message.channel.send(embed);
 
