@@ -1,5 +1,5 @@
 const discord = require("discord.js")
-const botConfig = require("../botConfig.json")
+const botConfig = require("./botConfig.json")
 const c = client.channels.cache.get("720642251738316860");
 
 module.exports.run = async(bot, message, args) => {
