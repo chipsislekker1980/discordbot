@@ -25,9 +25,9 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.MessageEmbed()
     .setTitle("Hallo " + message.author.username)
-    .setThumbnail("https://imgur.com/9lPvrTz")
+    .setThumbnail("https://imgur.com/9lPvrTz.png")
     .setDescription("_**Uw ticket is aangemaakt!**_")
-    .setFooter("Clearance ticket systeem", "https://imgur.com/9lPvrTz");
+    .setFooter("Clearance ticket systeem", "https://imgur.com/9lPvrTz.png");
 
     message.channel.send(embed);
 
