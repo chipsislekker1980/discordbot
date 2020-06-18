@@ -56,7 +56,7 @@ module.exports.run = async (bot, message, args) => {
                     var embedParent = new discord.MessageEmbed()
                     .setTitle(`Hallo ${message.author.username}`)
                     .setDescription("Welkom bij jou ticket, stel hier je vragen of meld een klacht!")
-                    .setFooter(`Clearance ticket systeem, https://imgur.com/9lPvrTz.png`);
+                    .setFooter(`Ticket is aangemaakt!`);
 
                 settedParent.send(embedParent);
 
