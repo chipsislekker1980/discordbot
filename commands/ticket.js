@@ -25,6 +25,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new discord.MessageEmbed()
         .setTitle("Hallo " + message.author.username)
+        .setThumbnail("https://imgur.com/9lPvrTz")
         .setDescription("Je ticket is aangemaakt")
         .setFooter("Stel je vragen/klachten daar in!");
 
@@ -75,5 +76,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "new"
+  name: "ticket"
 }
