@@ -42,7 +42,7 @@ module.exports.run = async(bot, message, args) => {
     var channel = message.member.guild.channels.cache.find(channels => channels.name === options.kanaal);
     if(!channel) return message.reply("Dit kanaal is niet gevonden.")
 
-    channel.send(announceEmbed);
+    channel.send("@everyone", announceEmbed);
 
 }
 
