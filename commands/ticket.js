@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.guild.channels.cache.forEach(channel => {
 
-        if(channel.name == userName.toLowerCase() + "-" + userDiscrimator){
+        if(channel.name == "🎫-" + userName.toLowerCase() + "-" + userDiscrimator){
             ticketBestaat = true;
 
             message.reply("Je hebt al een ticket open staan!");
@@ -75,5 +75,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "ticket"
+  name: "new"
 }
