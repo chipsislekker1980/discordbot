@@ -1,5 +1,6 @@
 const discord = require("discord.js")
-const CategoryID = require("./setupticket.js")
+
+const categoryID = 721391510129737800
 
 module.exports.run = async (bot, message, args) => {
 
