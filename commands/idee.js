@@ -2,7 +2,6 @@ const discord = require("discord.js")
 
 const botConfig = require("../botconfig.json")
 
-const bot = new discord.Client();
 
 module.exports.run = async(bot, message, args) => {
 
@@ -29,7 +28,7 @@ module.exports.run = async(bot, message, args) => {
             .setDescription(item)
             .setThumbnail(bot.user.displayAvatarURL())
             .setTimestamp()
-            .setFooter(" | Clearance idee systeem |", bot.user.displayAvatarURL())
+            .setFooter("Idee", bot.user.displayAvatarURL())
             c.send(suggestEmbed).then((message) => {
     
             const sent = message;

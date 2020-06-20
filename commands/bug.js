@@ -6,11 +6,11 @@ const bot = new discord.Client();
 
 module.exports.run = async(bot, message, args) => {
 
-    const c = bot.channels.cache.get("");
+    const c = bot.channels.cache.get("720642241030389801");
 
     var prefix = botConfig.prefix;
 
-    var item = message.content.slice(6); 
+    var item = message.content.slice(5); 
 
         if (!item) {
 
@@ -25,11 +25,11 @@ module.exports.run = async(bot, message, args) => {
         var suggestEmbed = new discord.MessageEmbed()
             .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL())
             .setColor("#ffd700")
-            .setTitle("Nieuwe bug van" + message.author.tag)
+            .setTitle("Nieuwe bug!", message.author.tag)
             .setDescription(item)
             .setThumbnail(bot.user.displayAvatarURL())
             .setTimestamp()
-            .setFooter(" | Clearance idee systeem |", bot.user.displayAvatarURL())
+            .setFooter(" | Bug commando. |", bot.user.displayAvatarURL())
             c.send(suggestEmbed).then((message) => {
     
        
