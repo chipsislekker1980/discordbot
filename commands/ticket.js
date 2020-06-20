@@ -1,6 +1,6 @@
 const discord = require("discord.js")
 
-const categoryID = "721391510129737800";
+const categoryID = "723403201994424410";
 
 module.exports.run = async (bot, message, args) => {
 
@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.guild.channels.cache.forEach(channel => {
 
-        if(channel.name == "🎫-" + userName.toLowerCase() + "-" + userDiscrimator){
+        if(channel.name == "🎫" + userName.toLowerCase() + "-" + userDiscrimator){
             ticketBestaat = true;
 
             message.reply("Je hebt al een ticket open staan!");
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("Hallo " + message.author.username)
     .setThumbnail("https://imgur.com/9lPvrTz.png")
     .setDescription("_**Uw ticket is aangemaakt!**_")
-    .setFooter(" | Clearance ticket system | ");
+    .setFooter("U wordt zo snel mogelijk geholpen door 1 van onze staff leden. ");
 
     message.channel.send(embed);
 

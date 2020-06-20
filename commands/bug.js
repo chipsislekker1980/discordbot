@@ -6,7 +6,7 @@ const bot = new discord.Client();
 
 module.exports.run = async(bot, message, args) => {
 
-    const c = bot.channels.cache.get("720642251738316860");
+    const c = bot.channels.cache.get("");
 
     var prefix = botConfig.prefix;
 
@@ -15,8 +15,8 @@ module.exports.run = async(bot, message, args) => {
         if (!item) {
 
             var noSuggestEmbed = new discord.MessageEmbed()
-                .setTitle("❌ Geef een idee mee!")
-                .setDescription("Zonder idee kan ik niets sturen!")
+                .setTitle("❌ Geef een bug mee!")
+                .setDescription("Zonder bug kan ik niets sturen!")
                 .setColor("#0000ff")
             return message.channel.send(noSuggestEmbed);
         }
@@ -25,22 +25,20 @@ module.exports.run = async(bot, message, args) => {
         var suggestEmbed = new discord.MessageEmbed()
             .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL())
             .setColor("#ffd700")
-            .setTitle("Nieuwe idee!")
+            .setTitle("Nieuwe bug van" + message.author.tag)
             .setDescription(item)
             .setThumbnail(bot.user.displayAvatarURL())
             .setTimestamp()
             .setFooter(" | Clearance idee systeem |", bot.user.displayAvatarURL())
             c.send(suggestEmbed).then((message) => {
     
-            const sent = message;
-            sent.react(`👍`).then(() => {
-                sent.react(`👎`)
+       
             })
     
-        })
-    }
+        }
+    
 
 
 module.exports.help = {
-    name: "idee"
+    name: "bug"
 }

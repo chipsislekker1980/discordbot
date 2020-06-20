@@ -2,18 +2,17 @@ const discord = require("discord.js")
 
 module.exports.run = async(bot, message, args) => {
 
-    // !announcement title | bericht | kleur | kanaal
 
     if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Sorry jij kunt dit niet doen. Je hebt de perm ``KICK_MEMBERS`` nodig.");
 
-    var seperator = "|";
+    var seperator = ",";
 
     if(args[0] == null){
 
         var embed = new discord.MessageEmbed()
         .setTitle("Mededeling")
         .setColor("#00ee00")
-        .setDescription(`Maak een announcement door gebruik te maken van: \n !say ${seperator} bericht ${seperator} kleur ${seperator} kanaal`);
+        .setDescription(`Maak een announcement door gebruik te maken van: \n !say ${seperator} titel ${seperator} bericht ${seperator} kleur ${seperator} kanaal (zonder #)`);
 
         return message.reply(embed);
 
@@ -33,7 +32,7 @@ module.exports.run = async(bot, message, args) => {
     }
 
 
-    var  announceEmbed = new discord.MessageEmbed()
+    var  sayEmbed = new discord.MessageEmbed()
         .setTitle("Mededeling")
         .setColor(options.kleur)
         .setDescription(`Bericht van _**${message.author}**_ \n\n **${options.titel}** \n${options.bericht}`)
@@ -42,7 +41,7 @@ module.exports.run = async(bot, message, args) => {
     var channel = message.member.guild.channels.cache.find(channels => channels.name === options.kanaal);
     if(!channel) return message.reply("Dit kanaal is niet gevonden.")
 
-    channel.send("@everyone", announceEmbed);
+    channel.send("@here", announceEmbed);
 
 }
 
